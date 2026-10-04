@@ -14,7 +14,7 @@ app.innerHTML = `
     <section class="hero" id="top">
       <div class="hero-line" aria-hidden="true"></div>
       <div class="hero-copy">
-        <p class="eyebrow">JIN SEONGBEOM · CHUNGCHEONGNAM-DO COUNCIL</p>
+        <p class="eyebrow">JIN SEONGBEOM · CHUNCHEONGNAM-DO COUNCIL</p>
         <h1>도민의 오늘을 듣고,<br><em>충남의 내일</em>을 만들겠습니다.</h1>
         <p>${site.slogan}</p>
         <a class="button" href="#debate">의정토론회 보기 ${arrow}</a>
@@ -59,33 +59,71 @@ app.innerHTML = `
     </section>
 
     <section class="debate" id="debate">
-      <div class="debate-side">
-        <p>POLICY<br>DEBATE</p>
-        <span>의정토론회</span>
-      </div>
+      <div class="debate-poster">
+        <div class="poster-brand">CHUNCHEONGNAM-DO COUNCIL</div>
 
-      <div class="debate-main">
-        <p class="eyebrow">${debate.label}</p>
-        <h2>${debate.title}</h2>
-        <p class="debate-description">${debate.description}</p>
-
-        <dl>
-          <div>
-            <dt>일시</dt>
-            <dd>${debate.schedule}</dd>
+        <div class="poster-header">
+          <h2>충남형</h2>
+          <div class="poster-header-copy">
+            <span>${debate.kicker}</span>
           </div>
-          <div>
-            <dt>장소</dt>
-            <dd>${debate.place}</dd>
-          </div>
-        </dl>
-      </div>
+        </div>
 
-      <div class="topics">
-        <p>주요 논의</p>
-        <ol>
-          ${debate.topics.map(topic => `<li>${topic}</li>`).join('')}
-        </ol>
+        <div class="poster-title-wrap">
+          <h3>${debate.title}</h3>
+          <h4>${debate.subtitle}</h4>
+          <div class="poster-label">${debate.label}</div>
+        </div>
+
+        <div class="poster-schedule">
+          <div class="date-block">
+            <div class="date-icon" aria-hidden="true">🗓</div>
+            <div>
+              <strong>${debate.schedule}</strong>
+              <span>${debate.scheduleTime}</span>
+            </div>
+          </div>
+          <div class="location-block">
+            <div class="location-icon" aria-hidden="true">📍</div>
+            <div>
+              <strong>${debate.place}</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="poster-table">
+          <div class="table-row table-row--gold">
+            <div class="table-label">${debate.moderator.role}</div>
+            <div class="table-name">${debate.moderator.name}</div>
+            <div class="table-meta">${debate.moderator.affiliation}</div>
+          </div>
+          <div class="table-row table-row--white">
+            <div class="table-label">${debate.presenter.role}</div>
+            <div class="table-name">${debate.presenter.name}</div>
+            <div class="table-meta">${debate.presenter.affiliation}</div>
+          </div>
+        </div>
+
+        <div class="panel-box">
+          <div class="panel-box__title">토론자</div>
+          <div class="panel-box__list">
+            ${debate.panelists.map(([name, title, org]) => `
+              <div class="panel-item">
+                <span>${name}</span>
+                <small>${title}</small>
+                <em>${org}</em>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <div class="poster-footer">
+          <div class="footer-mark" aria-hidden="true">의회</div>
+          <div class="footer-text">
+            <strong>${debate.organizer.name}</strong>
+            <span>${debate.organizer.sub}</span>
+          </div>
+        </div>
       </div>
     </section>
 

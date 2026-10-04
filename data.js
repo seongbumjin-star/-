@@ -40,16 +40,35 @@ export const activities = [
 ];
 
 export const debate = {
-  label: 'POLICY DEBATE',
-  title: '도민의 목소리를 정책으로 연결합니다.',
-  description: '충남의 미래는 시민의 삶에서 시작됩니다. 지역의 문제를 함께 진단하고, 더 나은 방향을 함께 설계합니다.',
-  schedule: '2026. 11. 14(토) 오후 2시',
-  place: '충청남도의회 시민홀',
-  topics: [
-    '지역경제 활성화와 청년 기회 확대',
-    '교통·생활 인프라 개선 방안',
-    '복지 안전망과 지역사회 연결 강화'
-  ]
+  label: '의정토론회',
+  title: '충남형 기본금융',
+  subtitle: '정책 실현 방안 마련',
+  kicker: '금융이 만드는 더 든든한 일상,<br>도민과 함께 만드는 충남의 내일',
+  schedule: '2026. 10. 7. (수)',
+  scheduleTime: '14:00 ~ 16:30',
+  place: '충남도의회 회의실 303호',
+  moderator: {
+    role: '좌장',
+    name: '진성범',
+    affiliation: '충남도의회 기획경제위원회'
+  },
+  presenter: {
+    role: '발제',
+    name: '서봉균',
+    affiliation: '정책실장 / 농어촌기본소득운동 전국연합'
+  },
+  panelists: [
+    ['송종운', '소장', '기본사회정책연구소'],
+    ['정만철', '소장', '농촌과 자치연구소'],
+    ['박경철', '연구위원', '충남연구원'],
+    ['최웅천', '연구위원', '충남연구원'],
+    ['천병규', '소장', '소상공경제정책과장'],
+    ['김상도', '소장', '충청남도청']
+  ],
+  organizer: {
+    name: '충청남도의회',
+    sub: 'CHUNCHEONGNAM-DO COUNCIL'
+  }
 };
 
 export const visions = [

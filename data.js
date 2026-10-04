@@ -41,7 +41,7 @@ export const activities = [
 
 export const debate = {
   label: '의정토론회',
-  title: '충남형 기본금융',
+  title: '기본금융',
   subtitle: '정책 실현 방안 마련',
   kicker: '금융이 만드는 더 든든한 일상,<br>도민과 함께 만드는 충남의 내일',
   schedule: '2026. 10. 7. (수)',
